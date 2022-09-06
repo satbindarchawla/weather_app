@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: weatherapp
+spec:
+  ingressClassName: kong
+  rules:
+  - http:
+      paths:
+      - path: /temperature
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: weatherapp-svc
+            port:
+              number: 80
