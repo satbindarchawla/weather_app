@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: weatherapp
+  name: currencycodeapp
   labels:
-    app: weatherapp
+    app: currencycodeapp 
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: weatherapp
+      app: currencycodeapp 
   template:
     metadata:
       labels:
-        app: weatherapp
+        app: currencycodeapp
     spec:
       containers:
-      - name: weatherapp
-        image: saifadam/weather_app:v1
+      - name: currencycodeapp 
+        image: satbindarchawla/country-currencycode:v1
         ports:
         - containerPort: 5000
