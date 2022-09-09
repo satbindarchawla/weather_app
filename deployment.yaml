@@ -5,7 +5,7 @@ metadata:
   labels:
     app: currencycodeapp 
 spec:
-  replicas: 2
+  replicas: 3 
   selector:
     matchLabels:
       app: currencycodeapp 
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: currencycodeapp 
-        image: satbindarchawla/country-currencycode:v1
+        image: satbindarchawla/country-currencycode:1.0.0.RELEASE 
         ports:
         - containerPort: 5000
